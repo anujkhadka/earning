@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.15.0/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/dashboard.js" defer></script>
+</head>
+<body>
+<h2>Dashboard</h2>
+<div>
+  <span id="userName"></span> | Coins: <span id="coins">0</span>
+  <button id="logoutBtn">Logout</button>
+</div>
+
+<h3>Available Tasks</h3>
+<div id="tasksContainer"></div>
+
+<h3>Request Withdrawal</h3>
+<input type="number" id="withdrawAmount" placeholder="Coins to withdraw">
+<select id="paymentMethod">
+  <option value="eSewa">eSewa</option>
+  <option value="Khalti">Khalti</option>
+</select>
+<button id="withdrawBtn">Request</button>
+
+<div id="dashboardMsg"></div>
+</body>
+</html>
